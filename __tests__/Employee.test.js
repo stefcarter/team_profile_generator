@@ -1,25 +1,60 @@
-class Employee {
-    constructor(name, id, email) {
-        this.name = name;
-        this.id = id;
-        this.email = email;
-    }
+const Employee = require('../lib/Employee.js');
 
-    getName(){
-        return this.name;
-    }
+describe("Employee", () => {
+    describe("constructor", () => {
+        it("should provide the employee's name, id number and email address when arguments are passed.", () => {
+            const name = "Carter";
+            const id = 111;
+            const email = "carter@fake.com";
+            const emp = new Employee(name, id, email);
+            expect(emp.name).toEqual(name);
+            expect(emp.id).toEqual(id);
+            expect(emp.email).toEqual(email);
+        });
+    });
 
-    getId(){
-        return this.id;
-    }
+    descirbe("getName", () => {
+        it("should return the value of the 'name' parameter", () => {
+            const name = "Carter";
+            const id = 111;
+            const email = "carter@fake.com";
+            const expected = "Carter";
+            const emp = new Employee(name, id, email);
+            const answer = emp.getName();
+            expect(asnwer).toEqual(expected);
+        });
+    });
 
-    getEmail() {
-        return this.email;
-    }
+    describe("getId", () => {
+        it("should return the value of the 'id' parameter", () => {
+            const name = "Carter";
+            const id = 111;
+            const email = "carter@fake.com";
+            const expected = 111;
+            const emp = new Employee(name, id, email);
+            const answer = emp.getId();
+            expect(answer).toEqual(expected);
+        });
+    });
 
-    getRole() {
-        return "Employee";
-    }
-}
+    describe("getEmail", () => {
+        it("should return the value of the 'email' parameter", () => {
+            const name = "Carter";
+            const id = 111;
+            const email = "carter@fake.com";
+            const expected = "carter@fake.com";
+            const emp = new Employee(name, id, email);
+            const answer = emp.getEmail();
+            expect(answer).toEqual(expected);
+        });
+    });
 
-module.exports = Employee;
+    describe("getRole", () => {
+        it("should return the value of the employee's role", () => {
+            const expected = "Employee";
+            const emp = new Employee();
+            const answer = emp.getRole();
+            expect(answer).toEqual(expected);
+        });
+    });
+});
