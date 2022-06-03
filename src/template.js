@@ -3,8 +3,8 @@ function renderManger(name, role, id, email, office){
         `
         <div class="col-xl-3 card">
             <div class="card-head">
-                <h3>${name}</h3>
-                <h4><i class="fa-solid fa-user-clock"></i> ${role}</h4>
+                <h3 class="nameDent">${name}</h3>
+                <h4><i class="fa-solid"></i>☕ ${role}</h4>
             </div>
             <div class="card-body">
                 <ul class="list-group list-group-flush">
@@ -23,8 +23,8 @@ function renderEngineer(name, role, id, email, git) {
         `
         <div class="col-xl-3 card">
             <div class="card-head">
-                <h3>${name}</h3>
-                <h4><i class="fa-solid fa-user-gear"></i> ${role}</h4>
+                <h3 class="nameDent">${name}</h3>
+                <h4><i class="fa-solid"></i>👓 ${role}</h4>
             </div>
             <div class="card-body">
                 <ul class="list-group list-group-flush">
@@ -43,8 +43,8 @@ function renderIntern(name, role, id, email, school) {
         `
         <div class="col-xl-3 card">
             <div class="card-head">
-                <h3>${name}</h3>
-                <h4><i class="fa-solid fa-user-graduate"></i> ${role}</h4>
+                <h3 class="nameDent">${name}</h3>
+                <h4><i class="fa-solid"></i>🎓 ${role}</h4>
             </div>
             <div class="card-body">
                 <ul class="list-group list-group-flush">
@@ -76,36 +76,15 @@ function renderPage(mgrData, engData, intData) {
             <header>
                 <h1>My Team</h1>
             </header>
-            <main class="w-100">
-                <section class="container team-1">
-                    <h2>Team 1</h2>
-                    <div class="separator">
-                        <div class="line"></div>
-                        <h3>Manager</h3>
-                        <div class="line"></div>
-                    </div>
-                    <div class="row manager">
+                <section class="container">
+                    <div class="row">
                         ${mgrData}
                         
-                    </div>
-                    <div class="separator">
-                        <div class="line"></div>
-                        <h3>Engineers</h3>
-                        <div class="line"></div>
-                    </div>
-                    <div class="row engineer">
                         ${engData}
-                    </div>
-                    <div class="separator">
-                        <div class="line"></div>
-                        <h3>Interns</h3>
-                        <div class="line"></div>
-                    </div>
-                    <div class="row intern">
+                   
                         ${intData}
                     </div>
                 </section>   
-            </main>
         </body>
         </html>
         `
