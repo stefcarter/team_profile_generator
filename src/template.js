@@ -43,7 +43,7 @@ function renderIntern(name, role, id, email, school) {
         `
         <div class="col-xl-3 card">
             <div class="card-head">
-            <h3>${name}</h3>
+                <h3>${name}</h3>
                 <h4><i class="fa-solid fa-user-graduate"></i> ${role}</h4>
             </div>
             <div class="card-body">
