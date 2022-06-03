@@ -3,9 +3,9 @@ const fs = require('fs');
 
 //identifier paths
 const Manager = require('./lib/Manager.js');
-const Egineer = require('./lib/Engineer.js');
-const Intern = require('./src/template.js');
-const { inherits } = require('util');
+const Engineer = require('./lib/Engineer.js');
+const Intern = require('./lib/Intern.js');
+const render = require('./src/template.js');
 
 var allMgrData = "";
 var allEngData = "";
@@ -57,8 +57,8 @@ const anotherEmp = [
     }
 ];
 
-function writeToFile(filename, filedata) {
-    fs.writeFile(fileName, FileData, (err) => {
+function writeToFile(fileName, fileData) {
+    fs.writeFile(fileName, fileData, (err) => {
         err ? console.error(err) : console.log('Success');
     });
 };
@@ -67,7 +67,7 @@ function anotherQuest () {
     inquirer
     .prompt(anotherEmp).then(answer => {
         if (answer.addAnother === "Yes") {
-            inherits();
+            init();
         } else {
             if(allMgrData === "") {
                 console.log("One Manager must be assigned to the team.");
@@ -85,13 +85,13 @@ function init() {
     .then(data => {
         switch(data.type) {
             case("Manager"):
-                    if(allMgrData != ""){
+                if(allMgrData != ""){
                     console.log("Only one Manager per Team.");
                     anotherQuest();
                     break;
                 } else {
-                    const newMgr = new Manager (data.employee, data.id, data.email, data.office);
-                    allMgrData += (render.renderManager(newMgr.name, newMgr.getRole(), newMgr.id, newMgr.email, newMgr.officeNumber));
+                    const newMgr = new Manager(data.employee, data.id, data.email, data.office);
+                    allMgrData += (render.renderManger(newMgr.name, newMgr.getRole(), newMgr.id, newMgr.email, newMgr.officeNumber));
                     anotherQuest();
                     break;
                 }
@@ -104,8 +104,7 @@ function init() {
                 const newInt = new Intern(data.employee, data.id, data.email, data.school);
                 allIntData += (render.renderIntern(newInt.name, newInt.getRole(), newInt.id, newInt.email, newInt.school));
                 anotherQuest();
-                break;            
-        
+                break;
         };
     });
 };
