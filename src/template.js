@@ -106,7 +106,6 @@ function renderPage(mgrData, engData, intData) {
                     </div>
                 </section>   
             </main>
-        <script src="./assets/index.js"></script>
         </body>
         </html>
         `
