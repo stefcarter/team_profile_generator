@@ -6,10 +6,6 @@ header {
     padding: 50px
 }
 
-/* main {
-    padding: 5%
-} */
-
 .row {
     justify-content: center;
 }
@@ -32,38 +28,3 @@ header {
 .nameDent {
     padding-left: 15px;
 }
-
-
-/* .list-group-item {
-    height: 75px;
-    text-align: start;
-} */
-
-/* .separator {
-    display: flex;
-    align-items: center; 
- } */
-  
-/* .separator h3 {
-    padding: 0 2rem; /* creates the space
-} */
-
-/* .separator .line {
-    flex: 1;
-    height: 3px;
-    background-color: #000;
-} */
-
-.team {
-    /* border: solid black 1px; */
-    /* align-items: center; */
-    /* justify-content: center;
-    text-align: center; */
-
-}
-
-/* .team h2 {
-    /* border: #000 1px solid; 
-    background-color: darkslategrey;
-    color: aliceblue;
-} */

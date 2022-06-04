@@ -21,12 +21,18 @@ const empData = [
     {
         type: "input",
         name: "employee",
-        message: "Enter Employee's name: ",
+        message: "Enter person's name: ",
     },
     {
         type: "input",
         name: "id",
-        message: "Enter Employee's number ID: ",
+        message: "Enter person's number ID: ",
+    },
+    {
+        type: "input",
+        name: "email",
+        message: "Enter person's email: ",
+        
     },
     {
         type: "input",
